@@ -1,14 +1,32 @@
-import React from "react";
-import EmojiButton from "./EmojiButton";
+import React, { useState } from "react";
 import Login from "./Login";
 import Logout from "./Logout";
 
-function Header({ isLoggedIn }) {
-  
+function Header() {
+  const [user, setUser] = useState(null);
+  console.log(user);
+
+  function handleLoginClick() {
+    setUser({
+      id: 1,
+      username: "Ian",
+    });
+  }
+
+  function handleLogoutClick() {
+    setUser(null);
+  }
+
   return (
     <header>
       <h1>PetLand</h1>
-      <nav>{isLoggedIn ? <Logout /> : <Login />}</nav>
+      <nav>
+        {user ? (
+          <button onClick={handleLogoutClick}>Logout</button>
+        ) : (
+          <button onClick={handleLoginClick}>Login</button>
+        )}
+      </nav>
     </header>
   );
 }
