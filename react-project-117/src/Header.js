@@ -1,12 +1,15 @@
 import React from "react";
 import EmojiButton from "./EmojiButton";
+import Login from "./Login";
+import Logout from "./Logout";
 
-function Header() {
+function Header({ isLoggedIn }) {
+  console.log(isLoggedIn);
   return (
     <header>
       <h1>PetLand</h1>
       <nav>
-        <EmojiButton emoji="👤" label="Login" />
+        <Login />
       </nav>
     </header>
   );
