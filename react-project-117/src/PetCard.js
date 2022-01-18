@@ -1,13 +1,17 @@
 import React from "react";
 import EmojiButton from "./EmojiButton";
 
-function PetCard(props) {
-  const snackLis = props.favSnacks.map((snack) => <li key={snack}>{snack}</li>);
+function PetCard({
+  name,
+  image = "https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg",
+  favSnacks,
+}) {
+  const snackLis = favSnacks.map((snack) => <li key={snack}>{snack}</li>);
 
   return (
     <div className="card">
-      <h2>{props.name}</h2>
-      <img src={props.image} alt={props.name} />
+      <h2>{name}</h2>
+      <img src={image} alt={name} />
       <EmojiButton label="Adopt" />
       <h3>Favorite Snacks</h3>
       <ul>{snackLis}</ul>
