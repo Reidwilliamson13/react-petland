@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import Login from "./Login";
 import Logout from "./Logout";
 
-function Header() {
-  const [user, setUser] = useState(null);
-  console.log(user);
-
+function Header({ user, setUser }) {
   function handleLoginClick() {
     setUser({
       id: 1,

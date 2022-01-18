@@ -1,5 +1,4 @@
 import React from "react";
-import EmojiButton from "./EmojiButton";
 
 function PetCard({
   name,
@@ -13,7 +12,7 @@ function PetCard({
     <div className="card">
       <h2>{name}</h2>
       <img src={image} alt={name} />
-      {isAdopted ? null : <EmojiButton label="Adopt" />}
+      {isAdopted ? null : <button>Adopt</button>}
       <h3>Favorite Snacks</h3>
       <ul>{snackLis}</ul>
     </div>
