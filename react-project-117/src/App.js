@@ -3,7 +3,7 @@ import Header from "./Header";
 import PetCard from "./PetCard";
 import PetForm from "./PetForm";
 import { pets as petsArray } from "./data";
-
+import "./style.css";
 /*
 
 Component Hierarchy

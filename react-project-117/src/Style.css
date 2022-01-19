@@ -41,9 +41,13 @@ main {
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
-  background-color: cornflowerblue;
+  background-color: rgb(143, 177, 241);
 }
 
 .card img {
   width: 100%;
+}
+
+body {
+  background-color: beige;
 }

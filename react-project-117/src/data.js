@@ -3,7 +3,7 @@ const pets = [
     id: 1,
     name: "Remmy",
     image:
-      "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/23124207/Old-English-Sheepdog-running-in-the-park.jpg",
+      "https://assets.aboutamazon.com/dims4/default/5a44799/2147483647/strip/true/crop/2448x1380+0+942/resize/660x372!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2Fd1%2F41%2F5a46bdbc4d12b8e11ce2fb6f22ff%2F20180105-dogsatwork-013.JPG",
     favSnacks: ["Peanut Butter", "Sweet Potato"],
     isAdopted: false,
   },
