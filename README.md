@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# PetLand App
+
+This is a simple Petland app created with React.js and is meant to assist users in choosing their next furry friend.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
