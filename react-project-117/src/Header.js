@@ -6,7 +6,7 @@ function Header({ user, setUser }) {
   function handleLoginClick() {
     setUser({
       id: 1,
-      username: "Ian",
+      username: "Reid",
     });
   }
 
