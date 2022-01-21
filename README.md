@@ -23,7 +23,7 @@ A description of features included in the main components of the PetLand app:
 
 ### Challenges or potential modifications
 
-- as a challenge or modification I could add another input on the PetForm that allows for the user to add a customizable Favorite Snack, creating another useState variable for snacks and syncing up to the value in the input
+- As a challenge or modification I could add another input on the PetForm that allows for the user to add a customizable Favorite Snack, creating another useState variable for snacks and syncing up to the value in the input
 
 - I realize I could have implemented more features such as routing or useEffect or other hooks but I didn’t have the time. I did however write a blog post on how to make Routes and a navbar for future reference so I’ll likely use that in future projects
 
