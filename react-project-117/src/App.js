@@ -4,18 +4,7 @@ import PetCard from "./PetCard";
 import PetForm from "./PetForm";
 import { pets as petsArray } from "./data";
 import "./style.css";
-/*
 
-Component Hierarchy
-
-  App
-  ├───Header
-  ├───PetForm : newPetObj ^ App
-  └───PetCard
-
-Lifting state: to decide which component to create our state variable in, 
-we need to locate the closest common parent
-*/
 
 function App() {
   const [pets, setPets] = useState([]);
@@ -27,7 +16,7 @@ function App() {
       .then((data) => setPets(data));
   }, []);
 
-  
+
   const petCards = pets.map((petObj) => {
     return (
       <PetCard
