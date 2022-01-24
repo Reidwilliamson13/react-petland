@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import PetCard from "./PetCard";
 import PetForm from "./PetForm";
@@ -18,8 +18,13 @@ we need to locate the closest common parent
 */
 
 function App() {
-  const [pets, setPets] = useState(petsArray);
+  const [pets, setPets] = useState([]);
   const [user, setUser] = useState(null);
+  useEffect(() => {
+    fetch("http://localhost:3000/pets")
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []);
 
   const petCards = pets.map((petObj) => {
     return (
