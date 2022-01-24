@@ -20,12 +20,14 @@ we need to locate the closest common parent
 function App() {
   const [pets, setPets] = useState([]);
   const [user, setUser] = useState(null);
+
   useEffect(() => {
     fetch("http://localhost:3000/pets")
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => setPets(data));
   }, []);
 
+  
   const petCards = pets.map((petObj) => {
     return (
       <PetCard
