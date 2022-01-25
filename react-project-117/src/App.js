@@ -35,13 +35,14 @@ function App() {
   }
 
   return (
+    <BrowserRouter>
       <div>
       <Header user={user} setUser={setUser} />
       {user ? <p>Welcome, {user.username}</p> : <em>Please log in!</em>}
       <PetForm onAddPet={addPet} />
       <main>{petCards}</main>
     </div>
-                    // Begin Bootstrap/Routing //
+  
     <div>
       <>
         <Navbar bg="dark" variant="dark">
@@ -66,20 +67,9 @@ function App() {
         </Routes>
       </div>
     </div>
-
+<BrowserRouter/>
     
   );
 }
-
- return (
-    <div>
-      <Header user={user} setUser={setUser} />
-      {user ? <p>Welcome, {user.username}</p> : <em>Please log in!</em>}
-      <PetForm onAddPet={addPet} />
-      <main>{petCards}</main>
-    </div>
-  );
-}
-
 
 export default App;
