@@ -37,38 +37,37 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-      <Header user={user} setUser={setUser} />
-      {user ? <p>Welcome, {user.username}</p> : <em>Please log in!</em>}
-      <PetForm onAddPet={addPet} />
-      <main>{petCards}</main>
-    </div>
-  
-    <div>
-      <>
-        <Navbar bg="dark" variant="dark">
-          <Container>
-            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-            <Nav className="me-auto">
-              <Nav.Link as={Link} to="/login">
-                Log In
-              </Nav.Link>
-              <Nav.Link as={Link} to="/petform">
-                Pet Form
-              </Nav.Link>
-            </Nav>
-          </Container>
-        </Navbar>
-      </>
-
-      <div>
-        <Routes>
-          <Route path="/login" element={<Header />} />
-          <Route path="/login" element={<PetForm />} />
-        </Routes>
+        <Header user={user} setUser={setUser} />
+        {user ? <p>Welcome, {user.username}</p> : <em>Please log in!</em>}
+        <PetForm onAddPet={addPet} />
+        <main>{petCards}</main>
       </div>
-    </div>
-<BrowserRouter/>
-    
+
+      <div className="divname">
+        <>
+          <Navbar bg="dark" variant="dark">
+            <Container>
+              <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+              <Nav className="me-auto">
+                <Nav.Link as={Link} to="/login">
+                  Log In
+                </Nav.Link>
+                <Nav.Link as={Link} to="/petform">
+                  Pet Form
+                </Nav.Link>
+              </Nav>
+            </Container>
+          </Navbar>
+        </>
+
+        <div>
+          <Routes>
+            <Route path="/login" element={<Header />} />
+            <Route path="/petform" element={<PetForm />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
